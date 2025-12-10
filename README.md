@@ -1,9 +1,59 @@
-1. Project Overview
-2. This project is a computational simulation of the "Pendulum Wave" effect, a physical phenomenon that demonstrates how simple harmonic oscillators with slightly different frequencies create complex, distinct visual patterns over time.Using MATLAB, I modeled a system of 15 independent simple pendulums. Unlike standard demonstrations where pendulums are spaced apart, this simulation utilizes a Single Pivot Point configuration ($x=0, y=0$), allowing the bobs to swing in a concentric "fanning" motion. This highlights the rhythmic transition from order to chaos and back to order.
-3. 2. Physics & Mathematical Model
-   3. The simulation relies on the Small Angle Approximation for simple pendulums. For small angles (where $\sin\theta \approx \theta$), the motion is isochronous and the period $T$ depends only on length $L$ and gravity $g$:$$T = 2\pi \sqrt{\frac{L}{g}}$$The Tuning Logic:To create the wave effect, the lengths of the 15 pendulums are not random. They are mathematically tuned so that each pendulum completes a specific integer number of oscillations within a shared Cycle Time ($T_{cycle} = 200s$).Longest Pendulum: Completes $N$ cycles in $200s$.Shortest Pendulum: Completes $N+14$ cycles in $200s$.Intermediate Pendulums: Follow an arithmetic progression in frequency.The length $L_n$ for the $n$-th pendulum is derived from its target frequency $f_n$:$$L_n = \frac{g}{(2\pi f_n)^2}$$3. Implementation Details (MATLAB)The simulation was built using MATLAB's vectorization capabilities to ensure efficient real-time calculation.State Calculation: The position of all 15 pendulums is calculated simultaneously at every time step using a vectorized cosine function: $\theta(t) = \theta_0 \cos(\omega t)$.Visualization:Perspective: Front-facing view with a shared origin $(0,0)$.Duration: Extended to 200 seconds to slow down the "unraveling" effect, allowing the eye to catch the transition phases.Animation: Uses drawnow and controlled pause(dt) commands to synchronize the simulation speed with real-time physics.
-   4. 4. Visual Patterns
-      5. Because of the shared pivot point, the simulation produces a unique set of patterns compared to the standard "snake" view:Synchronization: At $t=0$ and $t=200$, all pendulums act as a single line.Phase Drift: As time progresses, the pendulums split into distinct groups (2 groups, then 3, then 4), creating a "breathing" or "fanning" visual effect.Chaos: At the halfway mark, the system appears entirely chaotic before resolving itself.
-   5. 5. Development Workflow (AI-Assisted)
-      6. This project utilized a Large Language Model (LLM) as a technical thought partner to accelerate the development cycle.Iteration: The LLM assisted in rapidly prototyping different viewing angles (Side vs. Top-Down vs. Shared Pivot).Optimization: The AI helped refine the MATLAB loops into vectorized operations for smoother performance.Debugging: We used the LLM to troubleshoot the "time-scale" issues, ensuring the animation speed matched the physical equations.
-   6. 6. Tools UsedLanguage: MATLABConcepts: Classical Mechanics, Simple Harmonic Motion, Signal Processing (Aliasing).
+# Pendulum Wave
+
+A clean, well-documented simulation of the classic "pendulum wave" demonstration. The project simulates many simple pendulums with slightly different lengths to produce striking synchronization and interference patterns.
+
+## Project Overview
+
+This repository contains a computational simulation of the pendulum wave effect — a set of simple pendulums with slightly different periods that produce visually rich patterns as they move in and out of phase.
+
+Key goals:
+- Recreate the visual phenomena seen in physical pendulum wave demonstrations.
+- Provide a clear, documented MATLAB implementation for experimentation and visualization.
+
+## Physics & Mathematical Model
+
+The simulation uses the small-angle approximation for simple pendulums (sin θ ≈ θ). Under this approximation, each pendulum behaves as a simple harmonic oscillator with period:
+
+T ≈ 2π√(L/g)
+
+where L is the pendulum length and g is gravitational acceleration. By selecting a sequence of lengths, the dataset of slightly different periods produces slow beat-like pattern changes and full re-synchronizations at predictable times.
+
+## Visual Patterns
+
+Because all pendulums share a common pivot but have different lengths, the motion produces a range of emergent patterns:
+- Synchronization: At particular times many pendulums align, producing a unified shape.
+- Wave-like motion: Phase differences create travelling wave patterns across the array.
+- Lissajous-like and interference shapes appear when plotting combined tip positions.
+
+The simulation typically shows full cycles of behavior (e.g., when the system returns to near its initial configuration), which is useful for teaching and demonstrations.
+
+## Development Workflow (AI-Assisted)
+
+This project used a Large Language Model (LLM) as a technical partner to accelerate prototyping and iterate on visualization styles, parameter choices, and documentation. The LLM helped with:
+- Prototyping viewing angles and plot styles
+- Suggesting parameter sets to demonstrate interesting effects
+- Drafting and refining documentation
+
+## Tools Used
+
+- Language: MATLAB
+- Concepts: Classical mechanics, simple harmonic motion, signal processing (aliasing)
+
+## Installation & Usage
+
+1. Open MATLAB.
+2. Add the project folder to the MATLAB path or change the working directory to the repository root.
+3. Run the main simulation script (e.g., `pendulum_wave.m`).
+4. Adjust parameters such as number of pendulums, length ranges, and simulation time to explore different behaviors.
+
+## Contributing
+
+Contributions, bug reports, and enhancements are welcome. Please open an issue or submit a pull request with a clear description of changes and examples where appropriate.
+
+## License
+
+Specify the project license here (e.g., MIT). Replace this section with the chosen license text or link.
+
+## Contact
+
+Maintainer: SahanPrime
