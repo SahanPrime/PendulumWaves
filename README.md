@@ -50,9 +50,6 @@ This project used a Large Language Model (LLM) as a technical partner to acceler
 
 Contributions, bug reports, and enhancements are welcome. Please open an issue or submit a pull request with a clear description of changes and examples where appropriate.
 
-## License
-
-Specify the project license here (e.g., MIT). Replace this section with the chosen license text or link.
 
 ## Contact
 
