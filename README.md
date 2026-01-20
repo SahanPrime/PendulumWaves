@@ -1,4 +1,5 @@
 # Pendulum Wave
+![Uploading image.png…]()
 
 A clean, well-documented simulation of the classic "pendulum wave" demonstration. The project simulates many simple pendulums with slightly different lengths to produce striking synchronization and interference patterns.
 
