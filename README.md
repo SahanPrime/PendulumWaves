@@ -1,5 +1,5 @@
 # Pendulum Wave
-![Uploading image.png…]()
+<iframe src="https://drive.google.com/file/d/1okkY5S2GTUXdsb9RGvAhU8kzVPTC0oVj/preview" width="640" height="480"></iframe>
 
 A clean, well-documented simulation of the classic "pendulum wave" demonstration. The project simulates many simple pendulums with slightly different lengths to produce striking synchronization and interference patterns.
 
