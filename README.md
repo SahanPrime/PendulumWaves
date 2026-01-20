@@ -1,11 +1,12 @@
 # Pendulum Wave
-<iframe src="https://drive.google.com/file/d/1okkY5S2GTUXdsb9RGvAhU8kzVPTC0oVj/preview" width="640" height="480"></iframe>
 
-A clean, well-documented simulation of the classic "pendulum wave" demonstration. The project simulates many simple pendulums with slightly different lengths to produce striking synchronization and interference patterns.
+[![Pendulum wave video](docs/preview.svg)](https://drive.google.com/file/d/1okkY5S2GTUXdsb9RGvAhU8kzVPTC0oVj/preview)
+
+A clean, well-documented simulation of the classic "pendulum wave" demonstration. The project simulates many simple pendulums with slightly different lengths to produce striking synchronization and in[...] 
 
 ## Project Overview
 
-This repository contains a computational simulation of the pendulum wave effect — a set of simple pendulums with slightly different periods that produce visually rich patterns as they move in and out of phase.
+This repository contains a computational simulation of the pendulum wave effect — a set of simple pendulums with slightly different periods that produce visually rich patterns as they move in and ou[...] 
 
 Key goals:
 - Recreate the visual phenomena seen in physical pendulum wave demonstrations.
@@ -17,7 +18,7 @@ The simulation uses the small-angle approximation for simple pendulums (sin θ �
 
 T ≈ 2π√(L/g)
 
-where L is the pendulum length and g is gravitational acceleration. By selecting a sequence of lengths, the dataset of slightly different periods produces slow beat-like pattern changes and full re-synchronizations at predictable times.
+where L is the pendulum length and g is gravitational acceleration. By selecting a sequence of lengths, the dataset of slightly different periods produces slow beat-like pattern changes and full re-sy[...] 
 
 ## Visual Patterns
 
@@ -50,7 +51,6 @@ This project used a Large Language Model (LLM) as a technical partner to acceler
 ## Contributing
 
 Contributions, bug reports, and enhancements are welcome. Please open an issue or submit a pull request with a clear description of changes and examples where appropriate.
-
 
 ## Contact
 
